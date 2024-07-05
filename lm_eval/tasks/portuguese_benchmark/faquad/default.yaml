@@ -1,2 +1,4 @@
+group:
+  - portuguese_benchmark
 task: faquad
 class: !function task.FaQuAD
