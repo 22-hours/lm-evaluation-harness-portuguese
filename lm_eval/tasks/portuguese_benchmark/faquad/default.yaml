@@ -1,0 +1,2 @@
+task: faquad
+class: !function task.FaQuAD
