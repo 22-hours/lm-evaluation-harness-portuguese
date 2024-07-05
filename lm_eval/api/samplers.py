@@ -31,7 +31,8 @@ class ContextSampler:
         # draw an extra fewshot sample if using same split as evaluating on
         n_samples = (
             num_fewshot + 1
-            if self.config.fewshot_split == self.config.test_split
+            if self.config.fewshot_split and self.config.fewshot_split == self.config.test_split\
+                or (not self.config.training_split and not self.config.test_split)
             else num_fewshot
         )
 
