@@ -1,0 +1,3 @@
+group: portuguese_benchmark
+task: assin2rte
+class: !function task.Assin2RTE
