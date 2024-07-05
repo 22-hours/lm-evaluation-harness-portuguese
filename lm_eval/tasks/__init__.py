@@ -323,7 +323,7 @@ class TaskManager:
                 if f.endswith(".yaml"):
                     yaml_path = os.path.join(root, f)
                     config = utils.load_yaml_config(yaml_path, mode="simple")
-                    if self._config_is_group(config):
+                    if self._config_is_group(config) and self._config_is_python_task(config):
                         # This is a group config
                         tasks_and_groups[config["group"]] = {
                             "type": "group",
