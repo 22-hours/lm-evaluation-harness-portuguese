@@ -1,0 +1,18 @@
+group:
+  - portuguese_benchmark
+task: boolq_pt
+dataset_path: maritaca-ai/boolq_pt
+description: "Analise se a questão a seguir é verdadeira.\n\n"
+num_fewshot: 4
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+doc_to_text: "{{passage}}\nnQuestão: {{question}}?\nResposta:"
+doc_to_target: answer
+doc_to_choice: ["Não", "Sim"]
+should_decontaminate: true
+doc_to_decontamination_query: passage
+metric_list:
+  - metric: acc
+metadata:
+  - version: 2.0

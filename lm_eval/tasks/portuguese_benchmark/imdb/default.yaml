@@ -1,0 +1,18 @@
+group:
+  - portuguese_benchmark
+task: imdb_pt
+dataset_path: maritaca-ai/imdb_pt
+num_fewshot: 2
+description: "Avalie a análise como refletindo um sentimento \"positivo\" ou \"negativo\".\n\n"
+output_type: multiple_choice
+training_split: train
+test_split: test
+doc_to_text: "Análise: {{text}}\nClasse:"
+doc_to_target: label
+doc_to_choice: ["negativo", "positivo"]
+should_decontaminate: true
+doc_to_decontamination_query: text
+metric_list:
+  - metric: acc
+metadata:
+  - version: 2.0

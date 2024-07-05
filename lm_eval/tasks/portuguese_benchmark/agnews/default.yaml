@@ -1,0 +1,18 @@
+group:
+  - portuguese_benchmark
+task: agnews_pt
+dataset_path: maritaca-ai/ag_news_pt
+num_fewshot: 12
+description: "Classifique o texto a seguir em uma das categorias: \"mundo\", \"esportes\", \"negocios\" ou \"tecnologia\".\n\n"
+output_type: multiple_choice
+training_split: train
+test_split: test
+doc_to_text: "Texto: {{text}}\nClasse:"
+doc_to_target: label
+doc_to_choice: ["mundo", "esportes", "negocios", "tecnologia"]
+should_decontaminate: true
+doc_to_decontamination_query: text
+metric_list:
+  - metric: acc
+metadata:
+  - version: 2.0

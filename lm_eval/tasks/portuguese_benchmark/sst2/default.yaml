@@ -1,0 +1,18 @@
+group:
+  - portuguese_benchmark
+task: sst2_pt
+dataset_path: maritaca-ai/sst2_pt
+num_fewshot: 34
+description: "Avalie o texto como refletindo um sentimento \"positivo\" ou \"negativo\".\n\n"
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+doc_to_text: "Texto: {{text}}\nClasse:"
+doc_to_target: label
+doc_to_choice: ["negativo", "positivo"]
+should_decontaminate: true
+doc_to_decontamination_query: text
+metric_list:
+  - metric: acc
+metadata:
+  - version: 2.0

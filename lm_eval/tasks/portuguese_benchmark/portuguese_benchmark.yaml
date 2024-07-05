@@ -1,0 +1,9 @@
+group: portuguese_benchmark
+task:
+  - agnews_pt
+  - assin2rte
+  - assin2sts
+  - boolq_pt
+  - imdb_pt
+  - sst2_pt
+  - faquad
