@@ -47,7 +47,7 @@ def _squad_agg(key, items):
     return _squad_metric(predictions=predictions, references=references).get(key, 0)
 
 
-@register_task("faquad")
+
 class FaQuAD(ConfigurableTask):
     VERSION = 1
     DATASET_PATH = "eraldoluis/faquad"

@@ -121,7 +121,7 @@ class Assin2Base(ConfigurableTask):
             return self.dataset["test"].map(self._process_doc)
 
 
-@register_task("assin2rte")
+
 class Assin2RTE(Assin2Base):
     VERSION = "balanced_log_likelihood"
     CLASS_NAMES = ["Não", "Sim"]
@@ -257,7 +257,7 @@ class Assin2RTE(Assin2Base):
         return {"macro_f1": True, "accuracy": True}
 
 
-@register_task("assin2sts")
+
 class Assin2STS(Assin2Base):
     VERSION = "balanced_log_likelihood_remove_low_confidence"
     # class names used only for training
